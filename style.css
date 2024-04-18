@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #153677, #4e085f);
+  padding: 10px;
+}
+.todo-app {
+  width: 40%;
+  /* height: 100%; */
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+h2 {
+  color: #002765;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #edeef0;
+  border-radius: 30px;
+  /* padding-left: 20px;
+  margin-bottom: 25px; */
+  margin-block: 20px 25px;
+  padding-left: 20px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px;
+  font-weight: 14px;
+  background: transparent;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #ff5945;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 40px;
+}
+li {
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+li::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: url(images/untick.png);
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 8px;
+}
+
+li.cross {
+  color: #555;
+  text-decoration: line-through;
+}
+li.cross::before {
+  background: url(images/tick.png);
+  background-size: cover;
+  background-position: center;
+}
+li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+li span:hover {
+  background: #edeef0;
+}
